@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import expertiseImage from "../assets/expertise.jpg";
 
 /* ── shared ── */
 const BLUE = "#0057B8";
@@ -412,7 +413,7 @@ function ExpertiseSection() {
                 border:     "1px solid rgba(0,87,184,0.2)",
               }}
             >
-              <img src="/src/assets/expertise.jpg" alt="Crystal Technology Services team" className="w-full h-full object-cover" />
+              <img src={expertiseImage} alt="Crystal Technology Services team" className="w-full h-full object-cover" />
             </div>
           </div>
 
