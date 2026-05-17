@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import AboutSection from "./components/AboutSection";
+import AboutSection from "./components/Aboutsection";
 import SolutionsSection from "./components/SolutionsSection";
 import Contact from "./components/Contact";
 import About from "./components/About";
