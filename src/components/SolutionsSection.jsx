@@ -8,7 +8,7 @@ import sterliteLogo from "../assets/partners/sterlite.png";
 import ciscoLogo from "../assets/partners/cisco.png";
 import sprinklrLogo from "../assets/partners/sprinklr.png";
 import polycomLogo from "../assets/partners/polycom.png";
-import genesysLogo from "../assets/partners/genesys,png";
+import genesysLogo from "../assets/partners/genesys.png";
 
 const BLUE = "#0057B8";
 
