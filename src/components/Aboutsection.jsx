@@ -355,13 +355,13 @@ export default function AboutSection() {
             {VALUES.map((v, i) => (
               <div
                 key={v.title}
-                className="rounded-2xl p-6 border bg-white dark:bg-[#0d1f35] cursor-default overflow-hidden relative"
+                className="rounded-2xl p-6 border cursor-default overflow-hidden relative"
                 style={{
                   borderColor: "rgba(10,22,40,0.08)",
                   opacity: inView ? 1 : 0,
                   transform: inView ? "translateY(0)" : "translateY(24px)",
                   transition: `opacity 0.6s ease ${0.3 + i * 0.08}s, transform 0.6s ease ${0.3 + i * 0.08}s, box-shadow 0.25s, border-color 0.25s`,
-                  minHeight: "280px",
+                  minHeight: "300px",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow =
@@ -377,29 +377,42 @@ export default function AboutSection() {
               >
                 {/* Background Image */}
                 <div
-                  className="absolute inset-0 opacity-10 dark:opacity-5"
+                  className="absolute inset-0"
                   style={{
                     backgroundImage: `url(${v.image})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 />
+                
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-black/50" />
 
                 {/* Content */}
                 <div className="relative z-10">
                   <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
-                    style={{ background: "#f0f6ff", color: BLUE }}
+                    className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 bg-white/20 backdrop-blur-sm"
+                    style={{ color: "#ffffff" }}
                   >
                     {v.icon()}
                   </div>
                   <h4
-                    className="font-display font-black text-[15px] mb-2"
-                    style={{ color: BLUE }}
+                    className="font-display font-black text-[16px] mb-2"
+                    style={{ 
+                      color: "#ffffff", 
+                      textShadow: "0 0 10px rgba(255,255,255,0.5)"
+                    }}
                   >
                     {v.title}
                   </h4>
-                  <p className="text-[13px] leading-relaxed text-slate-500 dark:text-slate-400">
+                  <p 
+                    className="text-[14px] leading-relaxed"
+                    style={{ 
+                      color: "#ffffff", 
+                      textShadow: "0 0 8px rgba(255,255,255,0.4)",
+                      opacity: 0.95
+                    }}
+                  >
                     {v.desc}
                   </p>
                 </div>
